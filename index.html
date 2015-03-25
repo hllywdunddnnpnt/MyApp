@@ -6,11 +6,28 @@
 	<link rel="stylesheet" href="js/style.css" />
 </head>
 <body onLoad="loadFunc()">
-	<button id="Shit">Shit</button><br /><br />
+	<button id="Shit" onClick="play(1)">Shit 1</button><br /><br />
+	<button id="Shit" onClick="play(2)">Shit 2</button><br /><br />
 	
 	<audio controls id="Audio1">
 		<source src="js/Shit.mp3" type="audio/mpeg">
 	</audio>
+	
+	<script>
+		var audioMP3 = new Audio(“js/Shit.mp3”);
+		var audioWAV = new Audio(“js/Shit.wav”);
+		function play(i)
+			{
+				if (i == 1)
+					{
+					audioMP3.play();
+					}
+				if (i == 2)
+					{
+					audioWAV.play();
+					}
+			}
+	</script>
 	
 </body>
 </html>
